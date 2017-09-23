@@ -25,7 +25,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
 
     test.vm.provider :docker do |d|
-      d.image = "tknerr/baseimage-ubuntu:16.04"
+      d.image = "tknerr/baseimage-ubuntu:14.04"
       d.privileged = true
       d.has_ssh = true
     end

@@ -1,6 +1,21 @@
 ---
 - hosts: all
 
+  pre_tasks:
+
+    - name: Install aptitude
+      apt: pkg=aptitude update_cache=yes
+      become: yes
+
+    - name: Apt update/upgrade
+      apt: upgrade=yes update_cache=yes
+      become: yes
+
+    - name: Install base packages
+      apt: pkg=apt-transport-https
+      become: yes
+
   roles:
 
+    - environment-docker
     - .
