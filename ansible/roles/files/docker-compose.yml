@@ -2,6 +2,8 @@ emp:
   image: svanosselaer/emp:latest
   ports:
     - 8080:8080
+  volumes:
+    - /var/lib/emp:/var/lib/emp
 
 emp-browser:
   image: svanosselaer/emp-browser:latest

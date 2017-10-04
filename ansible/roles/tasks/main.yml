@@ -8,11 +8,15 @@
       become: yes
 
     - name: Create emp directory
-      file: path=/emp state=directory owner=ubuntu group=ubuntu
+      file: path=/etc/emp state=directory owner=ubuntu group=ubuntu
+      become: yes
+
+    - name: Create data directory
+      file: path=/var/lib/emp state=directory mode="u=rwx,g=rwx,o=rwx"
       become: yes
 
     - name: Copy docker-compose configuration
-      copy: src=docker-compose.yml dest=/emp owner=ubuntu group=ubuntu
+      copy: src=docker-compose.yml dest=/etc/emp owner=ubuntu group=ubuntu
       become: yes
 
     - name: Copy upstart script for docker services
