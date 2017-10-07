@@ -2,6 +2,10 @@
 
 The purpose of this project is to provide mechanisms for developing, testing and deploying EMP AWS.
 
+Main Project Repository:
+
+* [Server](https://github.com/svo/emp)
+
 __NOTES:__ this project uses git submodules so you will want to clone recursively to have all expected behaviours.
 
 ```
